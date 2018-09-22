@@ -1,0 +1,44 @@
+<table class="table table-bordered thead-dark">
+  <thead>
+    <th>
+      Currency
+    </th>
+    <th>
+      Unit
+    </th>
+    <th>
+      Value
+    </th>
+    <th>
+      Action
+    </th>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let currency$ of currencies">
+      <ng-container *ngIf="(currency$ | async) as currency">
+        <tr>
+          <th scope="row">
+            {{currency.code}},
+          </th>
+          <td>
+            1
+          </td>
+          <td *ngIf="currency.rates as rates">
+              {{rates[0].mid | json}}
+          </td>
+          <td>
+            <button class="btn btn-primary">Buy</button>
+          </td>
+        </tr>
+          
+          
+
+
+
+      </ng-container>
+    </ng-container>
+
+
+  </tbody>
+
+</table>

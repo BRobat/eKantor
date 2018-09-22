@@ -1,5 +1,6 @@
-import { CurrencyService } from './services/currency.service';
+
 import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -9,15 +10,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
 
-  constructor(private currencyService: CurrencyService) {
-    this.onGet()
+  constructor() {
+
   }
 
-  onGet() {
-    this.currencyService.getCurrencies().subscribe(
-      (response) => console.log("response",response),
-      (error) => console.log(error)
-    )
-  }
+
   
 }
