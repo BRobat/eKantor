@@ -3,8 +3,7 @@ import { CurrencyService } from '../../services/currency.service';
 
 @Component({
   selector: 'app-currencies',
-  templateUrl: './currencies.component.html',
-  styleUrls: ['./currencies.component.css']
+  templateUrl: './currencies.component.html'
 })
 export class CurrenciesComponent{
 
