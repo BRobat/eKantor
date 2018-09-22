@@ -11,7 +11,7 @@ import { CurrenciesComponent } from './components/currencies/currencies.componen
 import { WalletComponent } from './components/wallet/wallet.component';
 import { ContainerComponent } from './components/container/container.component';
 import { LoginComponent } from './components/login/login.component';
-import { EditComponent } from './comonents/edit/edit.component';
+import { EditComponent } from './components/edit/edit.component';
 
 @NgModule({
   declarations: [

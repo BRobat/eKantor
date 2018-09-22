@@ -68,6 +68,15 @@ export class CurrencyService {
       }
     );
   };
+  getRub() {
+    return this.http.get('http://api.nbp.pl/api/exchangerates/rates/a/rub')
+    .map(
+      (response: Response) => {
+        const rub = response.json();
+        return rub;
+      }
+    );
+  };
 
 
 

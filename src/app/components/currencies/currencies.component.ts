@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Response } from '@angular/http';
 import { CurrencyService } from '../../services/currency.service';
 
 @Component({
@@ -20,7 +19,8 @@ export class CurrenciesComponent{
     this.currencyService.getFunt(),
     this.currencyService.getDollar(),
     this.currencyService.getEuro(),
-    this.currencyService.getCzk()
+    this.currencyService.getCzk(),
+    this.currencyService.getRub()
     ]
     console.log(this.currencies);
   }
