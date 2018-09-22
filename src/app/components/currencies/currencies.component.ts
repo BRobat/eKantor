@@ -9,11 +9,6 @@ import { CurrencyService } from '../../services/currency.service';
 })
 export class CurrenciesComponent{
 
-  funt: any[];
-  dollar: any[];
-  euro: any[];
-  czk: any[];
-
   currencies: any[];
 
   constructor(private currencyService: CurrencyService) {
