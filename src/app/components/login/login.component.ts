@@ -1,3 +1,5 @@
+import { AuthGuardService } from './../../services/auth-guard.service';
+import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthGuardService) { }
 
   ngOnInit() {
   }
 
+  onLogin(form: NgForm) {
+    const email = form.value.email;
+    const password = form.value.password;
+    this.authService.signInUser(email, password);
+  }
 }

@@ -1,3 +1,4 @@
+import { UserService } from './../../services/user.service';
 import { AuthGuardService } from './../../services/auth-guard.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
@@ -8,7 +9,9 @@ import { NgForm } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private authService: AuthGuardService) { }
+  constructor(private authService: AuthGuardService,
+      private userService: UserService
+    ) { }
 
   ngOnInit() {
   }

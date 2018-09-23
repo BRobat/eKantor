@@ -36,7 +36,8 @@ import { AuthGuardService } from './services/auth-guard.service';
       {path: "container", component: ContainerComponent},
       {path: "edit", component: EditComponent},
       {path: "login", component: LoginComponent},
-      {path: 'register', component: RegisterComponent}
+      {path: 'register', component: RegisterComponent},
+      {path: 'login', component: LoginComponent},
       
     ])
   ],
