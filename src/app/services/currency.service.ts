@@ -39,8 +39,6 @@ export class CurrencyService {
       }
     );
   };
-
-
   getDollar() {
     return this.http.get('http://api.nbp.pl/api/exchangerates/rates/a/usd')
     .map(

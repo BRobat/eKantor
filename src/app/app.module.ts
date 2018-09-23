@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { NgForm, FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -12,6 +13,8 @@ import { WalletComponent } from './components/wallet/wallet.component';
 import { ContainerComponent } from './components/container/container.component';
 import { LoginComponent } from './components/login/login.component';
 import { EditComponent } from './components/edit/edit.component';
+import { RegisterComponent } from './components/register/register.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -21,20 +24,23 @@ import { EditComponent } from './components/edit/edit.component';
     WalletComponent,
     ContainerComponent,
     LoginComponent,
-    EditComponent
+    EditComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     HttpClientModule,
+    FormsModule,  
     RouterModule.forRoot([
       {path: "container", component: ContainerComponent},
       {path: "edit", component: EditComponent},
-      {path: "login", component: LoginComponent}
+      {path: "login", component: LoginComponent},
+      {path: 'register', component: RegisterComponent}
       
     ])
   ],
-  providers: [CurrencyService],
+  providers: [CurrencyService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
